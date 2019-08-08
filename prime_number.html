@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = Number(prompt("Nhap so luong nguyen to: "));
+    let count = 0;
+    let n = 2;
+    while(count<=number){
+        if(isPrime(n)){
+            document.write(n+ " ");
+            count ++;
+        }n++;
+    }
+    function isPrime(n) {
+        if(n<2){
+            return false;
+        }else{
+            for(i=2;i<=Math.sqrt(n);i++){
+                if(n%i==0){
+                    return false;
+                }
+            }
+        }return true;
+    }
+
+</script>
+</body>
+</html>
